@@ -1,0 +1,373 @@
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+html {
+    height: 100%;
+    text-align: center;
+    top: 0;
+
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid rgb(199, 235, 250);
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(199, 235, 250);
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header {
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 popOut;
+    padding: 20px;
+}
+
+header a,
+header .links {
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+/* Added for aesthetics */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, Sans Serif;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(199, 235, 250);
+}
+
+.container-fluid h2 {
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+.container-fluid .container-2 h3,
+.container-fluid .container-2 span {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+
+@keyframes popOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    top: auto;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.index-about {
+    height: 100vh;
+}
+
+.myfamily-index {
+    height: 90vh;
+}
+
+.myhobbies-index {
+    height: 250vh;
+}
+
+@media (min-width:10px) {
+
+    .abouted,
+    .general {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .index-front {
+        top: 90px;
+        position: relative;
+    }
+
+    section {
+        position: relative;
+        top: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .index-about {
+        height: auto;
+        padding: 30px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section .container-dp {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dpfront {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .clip {
+        display: none;
+    }
+
+    .container-info {
+        position: static;
+        margin: 0;
+        top: 15px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .slide-number {
+        width: 100%;
+    }
+
+    section h4 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section .text-container {
+        flex-direction: column;
+    }
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/*FAMILY SLIDE*/
+/* Fading animation */
+.run {
+    animation: linear infinite;
+    animation-name: run;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 5s;
+    animation-duration: 4s;
+}
+
+@keyframes run {
+    from {
+        left: 6;
+    }
+
+    50% {
+        left: calc(100% - 100px);
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+/*HOBBIES SECTION*/
+
+.slide-wrapper {
+    width: 2912px;
+    -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+}
+
+.slide-wrapper1 {
+    width: 3912px;
+    -webkit-animation: slide1 18s ease infinite;
+}
+
+.slide1 {
+    float: left;
+    height: 430px;
+    width: 328px;
+}
+
+.slide-number1 {
+    border: 5px double rgb(0, 0, 0);
+}
+
+@-webkit-keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
+
+    30% {
+        margin-left: -728px;
+    }
+
+    50% {
+        margin-left: -728px;
+    }
+
+    60% {
+        margin-left: -1456px;
+    }
+
+    70% {
+        margin-left: -1456px;
+    }
+
+    80% {
+        margin-left: -2184px;
+    }
+
+    90% {
+        margin-left: -2184px;
+    }
+}
+
+@-webkit-keyframes slide1 {
+    20% {
+        margin-left: 0px;
+    }
+
+    30% {
+        margin-left: -328px;
+    }
+
+    50% {
+        margin-left: -659px;
+    }
+
+    60% {
+        margin-left: -659px;
+    }
+
+    70% {
+        margin-left: -989px;
+    }
+
+
+}

@@ -326,6 +326,7 @@ img {
 
 .slideshow-container {
     border: 10px solid white;
+    width:100%;
 }
 
 .cont {

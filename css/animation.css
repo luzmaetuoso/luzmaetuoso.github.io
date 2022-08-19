@@ -190,8 +190,25 @@ section {
     }
 }
 
+@media screen and (max-width:1207px) {
+    .skill1 .type .container .row .code h4 span {
+        background-color: transparent;
+    }
+    .text-container .text-box h4 span {
+        background-color: transparent;
+        color: black;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        flex-direction: column;
+    }
+    header {
+        background-color: #1e2228;
+    }
 	header #logo {
 		float: none;
 		width: auto;
@@ -232,10 +249,41 @@ section {
 	header :checked ~ .icon-burger .line:nth-child(2) {
 		opacity: 0;
 	}
+
+    .index-front {
+        width: auto;
+		height: auto;
+
+    }
+
+    .index-front .container-fluid {
+        top:0;
+        left:0;
+        padding: 2em;
+        
+    }
 	
+    .index-front .container-fluid h2 {
+        width: auto;
+		height: auto;
+        font-size: 50px;
+        text-align: center;
+        align-items: center;
+    }
+    .index-front .container-2 h3 {
+        width: auto;
+        font-size: 28px;
+    }
+
+    .index-front .index-bg {
+        top:0;
+        left:0;
+        height:750px;
+    }
+    
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .index-front {
         top: 90px;
         position: relative;
@@ -325,9 +373,27 @@ section {
         padding: 10px;
     }
 
-    .container-dp .bg-famtext {
-        width: 100%;
+    .bg-famtext {
+        width:100%;
+        padding:3em;
+        left:0;
+        margin-left:0;
+        
+    }
+    .bg-famtext .cont .box{
+        width:100%;
+        padding:1em;
         margin-left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .bg-famtext .cont .box .image {
+        display: block;
+        align-items: center;
+        align-self: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
     }
 
     .myhobbies-index {
@@ -339,21 +405,34 @@ section {
     .myhobbies-index .container-dp {
         display: block;
         flex-direction: column;
+        width:100%;
     }
 
     .hobbies4 {
         width: 100%;
+        padding: 0%;
+        left:0;
     }
 
     .sketch-container {
         width: 100%;
         flex-direction: column;
+        margin-left: 0;
+    }
+    #slideshow1 {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .hobbies2 .row img {
+        width:100%;
     }
 
     .myhobbies-index .container {
         display: block;
         width: 100%;
         flex-direction: column;
+        padding: 1px;
     }
 
     .hobbies1 {
@@ -375,6 +454,13 @@ section {
     #slideshow {
         width: 100%;
     }
+
+    .type .code {
+        width: 100%;
+        padding: 1em;
+    }
+
+    
 }
 
 .reveal {

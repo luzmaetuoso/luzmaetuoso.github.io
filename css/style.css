@@ -1,3 +1,20 @@
+a, #logo {
+    line-height: 1.7;
+    margin: 0;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s
+}
+
+a:focus, #logo:focus {
+    outline: none !important
+}
+
+a:hover, #logo:hover {
+    text-decoration: none
+}
+
 header {
     background-color: #66CCCC;
     font-size: medium;
@@ -21,8 +38,8 @@ header #logo {
     align-items: center;
     font-size: 35px;
     font-family: 'Sriracha', cursive;
+    text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
     font-weight: bold;
-    transition: transform .2s;
 }
 header .links {
     float: right;
@@ -46,14 +63,16 @@ header .links a {
 }
 
 header #logo:hover {
-    background: -webkit-linear-gradient(#FFFFCC, #00FFFF);
+    background: -webkit-linear-gradient(#31cee2, #051d3a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-shadow: none;
 }
 
 header .links a:hover {
-    background: -webkit-linear-gradient(#FFFFCC, #00FFFF);
-    border-radius: 1em;
+    background: -webkit-linear-gradient(#056876, #05669a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: .5em;
     color: rgb(7, 1, 1);
 }

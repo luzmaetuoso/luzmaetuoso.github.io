@@ -1,0 +1,584 @@
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+html {
+    height: 100%;
+    text-align: center;
+    top: 0;
+
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid rgb(199, 235, 250);
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(199, 235, 250);
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header {
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 popOut;
+    padding: 20px;
+}
+
+header a,
+header .links {
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+/* Added for aesthetics */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, Sans Serif;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(199, 235, 250);
+}
+
+.container-fluid h2 {
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+.container-fluid .container-2 h3,
+.container-fluid .container-2 span {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
+}
+
+
+@keyframes popOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    top: auto;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.index-about {
+    height: 100vh;
+}
+
+.myfamily-index {
+    height: 90vh;
+}
+
+.myhobbies-index {
+    height: 250vh;
+}
+
+@media (min-width:10px) {
+
+    .abouted,
+    .general {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1207px) {
+    .skill1 .type .container .row .code h4 span {
+        background-color: transparent;
+    }
+    .text-container .text-box h4 span {
+        background-color: transparent;
+        color: black;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        flex-direction: column;
+    }
+    header {
+        background-color: #1e2228;
+    }
+	header #logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	header .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	header .links a {
+		font-size: 20px;
+	}
+	header :checked ~ .links {
+		bottom: 0;
+	}
+	header .icon-burger {
+		display: block;
+	}
+	header :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	header :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	header :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+
+    .index-front {
+        width: auto;
+		height: auto;
+
+    }
+
+    .index-front .container-fluid {
+        top:0;
+        left:0;
+        padding: 2em;
+        
+    }
+	
+    .index-front .container-fluid h2 {
+        width: auto;
+		height: auto;
+        font-size: 50px;
+        text-align: center;
+        align-items: center;
+    }
+    .index-front .container-2 h3 {
+        width: auto;
+        font-size: 28px;
+    }
+
+    .index-front .index-bg {
+        top:0;
+        left:0;
+        height:750px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+    .index-front {
+        top: 90px;
+        position: relative;
+        height: auto;
+    }
+
+    .index-bg {
+        width: 100%;
+        height: 690px;
+    }
+
+    .index-front .container-fluid h2 {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
+        position: relative;
+        display: block;
+    }
+    .index-front .container-2 {
+        width: 100%;
+        display: block;
+        text-align: center;
+        align-items: center;
+        position: relative;
+    }
+
+    section {
+        position: relative;
+        top: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .index-about {
+        height: auto;
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section .container-dp {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dpfront {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .clip {
+        display: none;
+    }
+
+    .container-info {
+        position: static;
+        margin: 0;
+        top: 15px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .slide-number {
+        width: 100%;
+    }
+
+    section h4 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section .text-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .myfamily-index {
+        height: auto;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .bg-famtext {
+        width:100%;
+        padding:3em;
+        left:0;
+        margin-left:0;
+        
+    }
+    .bg-famtext .cont .box{
+        width:100%;
+        padding:1em;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .bg-famtext .cont .box .image {
+        display: block;
+        align-items: center;
+        align-self: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .myhobbies-index {
+        height: auto;
+        padding: 1em;
+        flex-direction: column;
+    }
+
+    .myhobbies-index .container-dp {
+        display: block;
+        flex-direction: column;
+        width:100%;
+    }
+
+    .hobbies4 {
+        width: 100%;
+        padding: 0%;
+        left:0;
+    }
+
+    .sketch-container {
+        width: 100%;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    #slideshow1 {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .hobbies2 .row img {
+        width:100%;
+    }
+
+    .myhobbies-index .container {
+        display: block;
+        width: 100%;
+        flex-direction: column;
+        padding: 1px;
+    }
+
+    .hobbies1 {
+        width: 100%;
+        display: block;
+        flex-direction: column;
+    }
+
+    .hobbies2 {
+        padding: 1em;
+    }
+
+    .hobbies3 {
+        width: 100%;
+        display: block;
+
+    }
+
+    #slideshow {
+        width: 100%;
+    }
+
+    .type .code {
+        width: 100%;
+        padding: 1em;
+    }
+
+    
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/*FAMILY SLIDE*/
+/* Fading animation */
+.run {
+    animation: linear infinite;
+    animation-name: run;
+    -webkit-animation: linear infinite;
+    -webkit-animation-name: run;
+    -webkit-animation-duration: 5s;
+    animation-duration: 4s;
+}
+
+@keyframes run {
+    from {
+        left: 6;
+    }
+
+    50% {
+        left: calc(100% - 100px);
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+/*HOBBIES SECTION*/
+
+.slide-wrapper {
+    width: 2912px;
+    -webkit-animation: slide 18s ease infinite;
+}
+
+.slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+}
+
+.slide-wrapper1 {
+    width: 3912px;
+    -webkit-animation: slide1 18s ease infinite;
+}
+
+.slide1 {
+    float: left;
+    height: 430px;
+    width: 328px;
+}
+
+.slide-number1 {
+    border: 5px double rgb(0, 0, 0);
+}
+
+@-webkit-keyframes slide {
+    20% {
+        margin-left: 0px;
+    }
+
+    30% {
+        margin-left: -728px;
+    }
+
+    50% {
+        margin-left: -728px;
+    }
+
+    60% {
+        margin-left: -1456px;
+    }
+
+    70% {
+        margin-left: -1456px;
+    }
+
+    80% {
+        margin-left: -2184px;
+    }
+
+    90% {
+        margin-left: -2184px;
+    }
+}
+
+@-webkit-keyframes slide1 {
+    20% {
+        margin-left: 0px;
+    }
+
+    30% {
+        margin-left: -328px;
+    }
+
+    50% {
+        margin-left: -659px;
+    }
+
+    60% {
+        margin-left: -659px;
+    }
+
+    70% {
+        margin-left: -989px;
+    }
+
+
+}

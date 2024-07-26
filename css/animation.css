@@ -194,9 +194,9 @@ section {
     .skill1 .type .container .row .code h4 span {
         background-color: transparent;
     }
+
     .text-container .text-box h4 span {
-        background-color: transparent;
-        color: black;
+        border-radius: 0%;
     }
 }
 
@@ -206,81 +206,243 @@ section {
         width: 100%;
         flex-direction: column;
     }
+
     header {
         background-color: #1e2228;
     }
-	header #logo {
-		float: none;
-		width: auto;
-		justify-content: center;
-	}
-	header .links {
-		float: none;
-		position: fixed;
-		z-index: 9;
-		left: 0;
-		right: 0;
-		top: 100px;
-		bottom: 100%;
-		width: auto;
-		height: auto;
-		flex-direction: column;
-		justify-content: space-evenly;
-		background-color: rgba(0,0,0,.8);
-		overflow: hidden;
-		box-sizing: border-box;
-		transition: all .5s ease-in-out;
-	}
-	header .links a {
-		font-size: 20px;
-	}
-	header :checked ~ .links {
-		bottom: 0;
-	}
-	header .icon-burger {
-		display: block;
-	}
-	header :checked ~ .icon-burger .line:nth-child(1) {
-		transform: translateY(10px) rotate(225deg);
-	}
-	header :checked ~ .icon-burger .line:nth-child(3) {
-		transform: translateY(-10px) rotate(-225deg);
-	}
-	header :checked ~ .icon-burger .line:nth-child(2) {
-		opacity: 0;
-	}
+
+    header #logo {
+        width: auto;
+        justify-content: center;
+        font-size: 30px;
+        text-align: center;
+        margin-left: 20%;
+    }
+
+    header #logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    header.shrink {
+        text-align: center;
+    }
+
+    header.shrink #logo {
+        width: 40%;
+        font-size: 20px;
+        /* Adjust font size for larger screens */
+    }
+
+    header.shrink #logo img {
+        width: 40px;
+        /* Adjust image size for larger screens */
+        height: 40px;
+    }
+
+    header .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 90px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, .8);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
+    }
+
+    header .links a {
+        font-size: 20px;
+    }
+
+    header.shrink .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 50px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, .8);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
+    }
+
+    #nav-toggle {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 11;
+        display: none;
+    }
+
+    header .icon-burger {
+        display: block;
+    }
+
+    header #nav-toggle:checked~.links {
+        bottom: 0;
+    }
+
+    header #nav-toggle:checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+
+    header #nav-toggle:checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+
+    header #nav-toggle:checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    /*MAIN INDEX*/
 
     .index-front {
         width: auto;
-		height: auto;
+        height: auto;
+    }
 
+    .title-h4 {
+        padding: 1px;
+        margin: 0 auto;
+    }
+
+    .container-dp {
+        flex-direction: row;
+        /* Arrange items in a row */
+        justify-content: center;
+        /* Center items horizontally */
+        align-items: flex-start;
+        /* Align items to the top */
+    }
+
+    .dpfront {
+        width: 30%;
+        /* Adjust size for larger screens */
+        height: auto;
+        /* Adjust height as needed */
+        margin: 0 20px 0 0;
+        /* Adjust margins */
+    }
+
+    .container-info {
+        width: 60%;
+        /* Adjust width for larger screens */
+        margin: 0;
+        /* Remove margins */
+    }
+
+    .subinfo {
+        margin: 0;
+        /* Center content */
+        padding: 7px;
+        font-size: 22px;
+        /* Adjust font size */
+        text-align: center;
+    }
+
+    .subinfo ul li {
+        list-style-type: none;
+    }
+
+    .education-info {
+        font-size: 15px;
+        padding: 5px;
+        width: 100%;
+        margin: 0;
+        text-align: center;
     }
 
     .index-front .container-fluid {
-        top:0;
-        left:0;
+        top: 0;
+        left: 0;
         padding: 2em;
-        
+
     }
-	
+
     .index-front .container-fluid h2 {
         width: auto;
-		height: auto;
+        height: auto;
         font-size: 50px;
         text-align: center;
         align-items: center;
     }
+
     .index-front .container-2 h3 {
         width: auto;
         font-size: 28px;
     }
 
     .index-front .index-bg {
-        top:0;
-        left:0;
-        height:750px;
+        top: 0;
+        left: 0;
+        height: 750px;
     }
-    
+
+    .cont .box {
+        width: calc(50% - 40px); /* Adjust width for larger screens */
+        height: auto; /* Adjust height to auto for column layout */
+        margin: 20px;
+        display: flex;
+        flex-direction: column; /* Ensure flex column layout */
+        align-items: center; /* Center content horizontally */
+    }
+
+    .cont .box .image {
+        width: auto;
+        height: auto;
+        padding: 5px;
+    }
+
+    /*SKILLS SECTION*/
+
+    .type .container {
+        width: 100%; /* Adjust container width */
+    }
+
+    .type .row {
+        flex-direction: row;
+        justify-content: space-between; /* Space items evenly */
+    }
+
+    .type .code {
+        text-align: center;
+    }
+
+    .lista ul li, .tools ul li {
+        list-style-type: none;
+        text-align: center;
+    }
+
+    .type .image-container {
+        width: 30%; /* Adjust image container width */
+    }
+
+    .row.tool {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Distribute space between logos */
+    }
+
+    .col-sm-3.image-container-logo, .col-sm-5.image-container-logo {
+        flex: 0 0 33%; /* Adjust width to fit four logos side by side */
+        max-width: 53%;
+        margin-bottom: 20px; /* Add some margin at the bottom for spacing */
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -303,6 +465,7 @@ section {
         position: relative;
         display: block;
     }
+
     .index-front .container-2 {
         width: 100%;
         display: block;
@@ -374,19 +537,21 @@ section {
     }
 
     .bg-famtext {
-        width:100%;
-        padding:3em;
-        left:0;
-        margin-left:0;
-        
+        width: 100%;
+        padding: 3em;
+        left: 0;
+        margin-left: 0;
+
     }
-    .bg-famtext .cont .box{
-        width:100%;
-        padding:1em;
+
+    .bg-famtext .cont .box {
+        width: 100%;
+        padding: 1em;
         margin-left: 0;
         align-items: center;
         justify-content: center;
     }
+
     .bg-famtext .cont .box .image {
         display: block;
         align-items: center;
@@ -405,27 +570,28 @@ section {
     .myhobbies-index .container-dp {
         display: block;
         flex-direction: column;
-        width:100%;
+        width: 100%;
     }
 
-    .hobbies4 {
+    /*.hobbies4 {
         width: 100%;
         padding: 0%;
         left:0;
-    }
+    }*/
 
     .sketch-container {
         width: 100%;
         flex-direction: column;
         margin-left: 0;
     }
+
     #slideshow1 {
         overflow: hidden;
         width: 100%;
     }
 
     .hobbies2 .row img {
-        width:100%;
+        width: 100%;
     }
 
     .myhobbies-index .container {
@@ -451,16 +617,12 @@ section {
 
     }
 
-    #slideshow {
-        width: 100%;
-    }
-
     .type .code {
         width: 100%;
         padding: 1em;
     }
 
-    
+
 }
 
 .reveal {

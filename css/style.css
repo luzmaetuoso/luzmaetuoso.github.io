@@ -323,8 +323,8 @@ header.shrink .links a {
     color: #FFFFFF;
 }
 
-.education-info {
-    font-size: 25px;
+span .education-info {
+    font-size: 15px;
     padding: 9px;
 }
 

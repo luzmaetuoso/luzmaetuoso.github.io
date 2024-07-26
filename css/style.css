@@ -1,55 +1,59 @@
-a, #logo {
+a,
+#logo {
     line-height: 1.7;
     margin: 0;
     transition: all .4s;
     -webkit-transition: all .4s;
     -o-transition: all .4s;
-    -moz-transition: all .4s
+    -moz-transition: all .4s;
 }
 
-a:focus, #logo:focus {
-    outline: none !important
+a:focus,
+#logo:focus {
+    outline: none !important;
 }
 
-a:hover, #logo:hover {
-    text-decoration: none
+a:hover,
+#logo:hover {
+    decoration: none;
 }
 
 header {
-    background-color: #66CCCC;
+    background-color: #2C3E50;
     font-size: medium;
     background-size: cover;
     width: 100%;
     position: fixed;
-	z-index: 10;
-	left: 0;
-	right: 0;
-	top: 0;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all .4s ease;
 }
 
 header #logo {
     float: left;
-	width: 40%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	color: #fff;
-    justify-content: center;
+    width: 40%;
+    height: 100%;
+    display: flex;
     align-items: center;
+    color: #fff;
+    justify-content: center;
     font-size: 35px;
     font-family: 'Sriracha', cursive;
     text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
     font-weight: bold;
 }
+
 header .links {
     float: right;
-	padding: 0;
-	margin: 0;
-	width: 60%;
-	height: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header .links a {
@@ -57,20 +61,20 @@ header .links a {
     font-family: 'Bebas Neue', cursive;
     font-size: 29px;
     display: block;
-	padding: 1em;
-	color: #fff;
-	text-decoration: none;
+    padding: 1em;
+    color: #fff;
+    text-decoration: none;
 }
 
 header #logo:hover {
-    background: -webkit-linear-gradient(#31cee2, #051d3a);
+    background: -webkit-linear-gradient(#FFA500, #FF6F61);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
 }
 
 header .links a:hover {
-    background: -webkit-linear-gradient(#056876, #05669a);
+    background: -webkit-linear-gradient(#FF6F61, #FFA500);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: .5em;
@@ -82,24 +86,53 @@ header .links li {
 }
 
 #nav-toggle {
-	position: absolute;
-	top: -100px;
+    position: absolute;
+    top: -100px;
 }
+
 header .icon-burger {
-	display: none;
-	position: absolute;
-	right: 5%;
-	top: 50%;
-	transform: translateY(-50%);
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 header .icon-burger .line {
-	width: 30px;
-	height: 5px;
-	background-color: #fff;
-	margin: 5px;
-	border-radius: 3px;
-	transition: all .3s ease-in-out;
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
 }
+
+/* New styles for the shrunk header */
+header.shrink {
+    height: 50px;
+    font-size: small;
+}
+
+header.shrink #logo {
+    width: 20%;
+    font-size: 20px;
+}
+
+header.shrink #logo img {
+    width: 50px;
+    height: 50px;
+}
+
+header.shrink .links {
+    width: 80%;
+}
+
+header.shrink .links a {
+    font-size: 18px;
+    padding: 0.5em;
+}
+
+/*MAIN INDEX*/
 
 .btnUp {
     position: fixed;
@@ -140,6 +173,8 @@ header .icon-burger .line {
     height: 650px;
     position: relative;
     object-fit: cover;
+    object-position: 50% 25%;
+    /* Adjust the image to 50% horizontally and 30% vertically */
 
 }
 
@@ -187,12 +222,12 @@ header .icon-burger .line {
     margin: 10px 0 20px;
     font-size: 40px;
     font-family: 'Amatic SC', cursive;
-    color: rgb(255, 255, 255);
-    background-color: rgb(18, 91, 133);
+    color: #333333;
+    background-color: #66CCCC;
 }
 
 .container-2 h3 span {
-    background-color: rgb(18, 91, 133);
+    background-color: #66CCCC;
     border-radius: 1em;
     padding: 0 10px;
 }
@@ -204,8 +239,8 @@ header .icon-burger .line {
 /*ABOUT SECTION*/
 
 .index-about {
-    position:relative;
-    background-color:rgb(223, 239, 254);
+    position: relative;
+    background-color: rgb(223, 239, 254);
     height: auto;
 }
 
@@ -244,12 +279,21 @@ header .icon-burger .line {
     display: flex;
 }
 
+.title-h4 {
+    font-size: 18px;
+    padding: 9px;
+}
+
+.nicknames {
+    list-style-type: square;
+}
+
 .container-info {
-    background-color: #8bd3d3;
+    background-color: #2C3E50;
     position: relative;
     margin: 10px 20px auto 20px;
     width: 100%;
-    color: rgb(21, 58, 91);
+    color: #333333;
     border: 4px solid rgb(18, 91, 133);
     display: inline-flex;
 }
@@ -265,30 +309,78 @@ header .icon-burger .line {
     list-style: none;
 }
 
+.general {
+    text-align: justify;
+    background-color: #fff;
+
+}
+
+.education {
+    background-color: #2C3E50;
+    border: none;
+    text-align: justify;
+    font-family: consolas;
+    color: #FFFFFF;
+}
+
+span .education-info {
+    font-size: 15px;
+    padding: 9px;
+}
+
 h4 {
     width: 100%;
     text-align: center;
     margin: 10px 0 20px;
     color: rgb(255, 255, 255);
+    font-weight: 900;
 }
 
 h4 span {
-    background-color: rgb(18, 91, 133);
+    background-color: #FFA500;
     border-radius: 1em;
     padding: 0 10px;
+}
+
+.text-container-link {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 20px;
+}
+
+.text-container-link p {
+    font-size: 16px;
+    color: #2C3E50;
+}
+
+.text-container-link a {
+    color: #FFA500;
+    text-decoration: underline;
+    letter-spacing: 0.1cm;
+    text-shadow:
+        -.6px -.6px 0 #2C3E50,
+        .6px -.6px 0 #2C3E50,
+        -.6px .6px 0 #2C3E50,
+        .6px .6px 0 #2C3E50;
+
+}
+
+.text-container-link a:hover {
+    text-decoration: underline;
+    color: #056876;
+    text-shadow: none;
 }
 
 
 
 /*FAMILY BACKGROUND SECTION*/
-
 * {
     box-sizing: border-box;
 }
 
 .myfamily-index {
     background-color: rgb(30, 61, 77);
-    height:auto;
+    height: auto;
     position: relative;
 }
 
@@ -345,7 +437,7 @@ img {
 
 .slideshow-container {
     border: 10px solid white;
-    width:100%;
+    width: 100%;
 }
 
 .cont {
@@ -562,7 +654,7 @@ img {
     /* Black w/opacity/see-through */
     color: white;
     border: 3px solid rgb(18, 91, 133);
-    margin-left:20px;
+    margin-left: 20px;
 }
 
 .bg-famtext ul {
@@ -616,9 +708,10 @@ img {
 /*HOBBIES SECTION*/
 
 .myhobbies-index {
-    height: auto;
     position: relative;
-    background-color:rgb(49, 80, 104);
+    background-color: rgb(49, 80, 104);
+    height: min-content;
+    padding: 20px 0;
 }
 
 .hobbies1 {
@@ -637,12 +730,21 @@ img {
     width: 100%;
     border: 15px black;
     border-style: double;
+    margin-left: 10px;
+    position: relative;
 }
 
-.hobbies5 {
-    background-color: #37c2c2;
-    width: 100%;
-    height: 513px;
+.hobbies5,
+.hobbies4,
+.hobbies6 {
+    display: block;
+    position: relative;
+    margin: 50px;
+}
+
+.watch-container {
+    padding: 20px;
+    background-color: #69c2c2;
 }
 
 .text1 img {
@@ -662,15 +764,80 @@ img {
 
 #slideshow1 {
     overflow: hidden;
-    height: 457px;
-    width: 350px;
+    height: 460px;
+    width: 280px;
     margin: 0 auto;
     border: 10px solid white;
     border-style: solid;
 }
 
-.sketch-container {
-    display: inline-flex;
+.read-container {
+    background-color: #69c2c2;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    padding: 1em;
+}
+
+.read-container .col-xs-12,
+.read-container .col-sm-4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.webcomics h4,
+.manga h4,
+.literature h4 {
+    margin: 10px auto;
+    border: 10px solid #000;
+    background-color: #000000;
+    align-items: center;
+    display: block;
+}
+
+.webcomics,
+.manga,
+.literature {
+    margin-bottom: 3px;
+}
+
+.img-responsive-webtoon,
+.img-responsive-manga,
+.img-responsive-literature {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    object-position: 50% 25%;
+}
+
+/* New styles for the reasons container */
+.hobbies6 .container {
+    border: 10px solid black;
+    color: #000;
+    display: block;
+    position: relative;
+    padding: 20px;
+    background-color: #e6e6e6;
+    /* Light grey background */
+    text-align: center;
+}
+
+.hobbies6 .container h4 {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #2C3E50;
+}
+
+.hobbies6 .container p {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.watch-container .row .col-xs-6 .text1 img {
+    width:60%;
 }
 
 
@@ -749,11 +916,52 @@ img {
     padding: 20px;
 }
 
+.code {
+    text-align: center;
+    /* Center the text within the code container */
+    padding: 20px;
+    /* Add some padding for better spacing */
+}
+
+
+
+.portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the container while maintaining the aspect ratio */
+}
+
+.image-container-logo img {
+    height: 100%;
+    width: 40%;
+    /* Set a fixed height for the image containers */
+    overflow: hidden;
+    /* Ensure no overflow */
+}
+
+.portrait-logo {
+    width: 50%;
+    height: 10%;
+    object-fit: cover;
+    /* Cover the container while maintaining the aspect ratio */
+}
+
+.lista li,
+.tools li {
+    list-style: disc;
+}
+
+
+
 .code,
 .voice {
     display: block;
-    padding: 5px;
     height: 400px;
+}
+
+.voice {
+    padding: 5px;
 }
 
 .word {
@@ -765,17 +973,23 @@ img {
     text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
-.lista>ul {
+.lista>ul,
+.tools>ul {
     display: inline-block;
     color: #bbb;
-    list-style-type: square;
 }
 
-.lista {
+.lista,
+.tools {
+    text-align: center;
     align-items: center;
+    align-items: center;
+    justify-content: center;
 }
 
-.lista ul li {
+
+.lista ul li,
+.tools ul li {
     text-align: justify;
     font: 700 normal 2.5em 'consolas';
 }
@@ -798,10 +1012,12 @@ section .text-container {
 section .text-container .text-box {
     margin: 20px;
     padding: 20px;
-    background: #b9ecf5;
+    background: #2C3E50;
+    color: #fff;
 }
 
 section .text-container .text-box ul li {
+    list-style: decimal;
     font-size: 15px;
     margin-bottom: 10px;
     text-align: justify;
